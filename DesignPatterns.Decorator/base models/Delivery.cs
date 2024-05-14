@@ -11,6 +11,7 @@
             _price = price;
         }
 
-        public abstract string Info();
+        public virtual string Info()
+            => $"il prezzo è {_price} euro";
     }
 }

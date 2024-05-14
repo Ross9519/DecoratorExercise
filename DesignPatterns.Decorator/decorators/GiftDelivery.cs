@@ -10,6 +10,6 @@ namespace DesignPatterns.Decorator.decorators
         }
 
         public override string Info()
-            => $"imballaggio regalo, il prezzo è {_price} euro";
+            => $"imballaggio regalo, {base.Info()}";
     }
 }

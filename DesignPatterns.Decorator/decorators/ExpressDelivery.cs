@@ -10,6 +10,6 @@ namespace DesignPatterns.Decorator.decorators
         }
 
         public override string Info()
-            => $"consegna express, il prezzo è {_price} euro";
+            => $"consegna express, {base.Info()}";
     }
 }

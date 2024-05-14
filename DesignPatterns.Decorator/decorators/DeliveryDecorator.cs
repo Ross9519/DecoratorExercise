@@ -7,6 +7,6 @@ namespace DesignPatterns.Decorator.decorators
         protected Delivery _delivery = delivery;
 
         public override string Info()
-            => _delivery.Info();
+            => base.Info();
     }
 }
