@@ -2,14 +2,12 @@
 
 namespace DesignPatterns.Decorator.base_models
 {
-    internal class StandardDelivery : DeliveryDecorator
+    internal class StandardDelivery(Delivery delivery) : DeliveryDecorator(delivery)
     {
-        public StandardDelivery(Delivery delivery) : base(delivery)
-        {
-            _price = 5.99M;
-        }
+        public override decimal TotalPrice()
+            => base.TotalPrice() + 5.99M;
 
         public override string Info()
-            => $"consegna standard, {base.Info()}";
+            => $"consegna standard, {base.Info()} {TotalPrice()} euro";
     }
 }

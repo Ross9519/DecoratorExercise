@@ -6,6 +6,8 @@ namespace DesignPatterns.Decorator.decorators
     {
         protected Delivery _delivery = delivery;
 
+        public override decimal TotalPrice()
+            => _delivery.TotalPrice();
         public override string Info()
             => base.Info();
     }

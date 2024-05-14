@@ -2,16 +2,9 @@
 {
     internal abstract class Delivery
     {
-        protected decimal _price;
-
-        protected Delivery() { }
-
-        protected Delivery(decimal price) 
-        {
-            _price = price;
-        }
+        public abstract decimal TotalPrice();
 
         public virtual string Info()
-            => $"il prezzo è {_price} euro";
+            => $"il prezzo è";
     }
 }

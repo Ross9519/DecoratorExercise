@@ -2,14 +2,12 @@
 
 namespace DesignPatterns.Decorator.decorators
 {
-    internal class GiftDelivery : DeliveryDecorator
+    internal class GiftDelivery(Delivery delivery) : DeliveryDecorator(delivery)
     {
-        public GiftDelivery(Delivery delivery) : base(delivery)
-        {
-            _price = 3.99M;
-        }
+        public override decimal TotalPrice()
+            => base.TotalPrice() + 3.99M;
 
         public override string Info()
-            => $"imballaggio regalo, {base.Info()}";
+            => $"imballaggio regalo, {base.Info()} {TotalPrice()} euro";
     }
 }

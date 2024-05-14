@@ -37,7 +37,7 @@ static string SelectionDelivery(string cmd)
     {
         "e" => DeliveryFactory.GetDelivery(DeliveryEnum.Express, item).Info(),
         "s" => DeliveryFactory.GetDelivery(DeliveryEnum.Standard, item).Info(),
-        "r" => DeliveryFactory.GetDelivery(DeliveryEnum.Gift, item).Info(),
+        "r" => DeliveryFactory.GetDelivery(DeliveryEnum.Gift, DeliveryFactory.GetDelivery(DeliveryEnum.Express, item)).Info(),
         "n" => item.Info(),
         _ => "un valore non supportato",
     };
