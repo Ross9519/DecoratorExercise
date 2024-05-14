@@ -39,6 +39,6 @@ static string SelectionDelivery(string cmd)
         "s" => DeliveryFactory.GetDelivery(DeliveryEnum.Standard, item).Info(),
         "r" => DeliveryFactory.GetDelivery(DeliveryEnum.Gift, item).Info(),
         "n" => item.Info(),
-        _ => "Sbagliato tutto zio",
+        _ => "un valore non supportato",
     };
 }
